@@ -11,11 +11,11 @@
         extract($r);
         
         $rss .= '<movie>';
-        $rss .= '<mov_title>' . $mus_title . '</mov_title>';
-        $rss .= '<mov_director>' . $mus_artist . '</mov_director>';
-        $rss .= '<mov_writer>' . $mus_genre . '</mov_writer>';
-        $rss .= '<mov_artist>' . $mus_writer . '</mov_artist>';
-        $rss .= '<mov_genre>' . $mus_writer . '</mov_genre>';
+        $rss .= '<mov_title>' . $mov_title . '</mov_title>';
+        $rss .= '<mov_director>' . $mov_artist . '</mov_director>';
+        $rss .= '<mov_writer>' . $mov_genre . '</mov_writer>';
+        $rss .= '<mov_artist>' . $mov_writer . '</mov_artist>';
+        $rss .= '<mov_genre>' . $mov_writer . '</mov_genre>';
         $rss .= '</movie>';
     }
     $rss .= '</channel>';
