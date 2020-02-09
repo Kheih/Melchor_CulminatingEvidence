@@ -12,10 +12,10 @@
         
         $rss .= '<movie>';
         $rss .= '<mov_title>' . $mov_title . '</mov_title>';
-        $rss .= '<mov_director>' . $mov_artist . '</mov_director>';
-        $rss .= '<mov_writer>' . $mov_genre . '</mov_writer>';
-        $rss .= '<mov_artist>' . $mov_writer . '</mov_artist>';
-        $rss .= '<mov_genre>' . $mov_writer . '</mov_genre>';
+        $rss .= '<mov_director>' . $mov_director . '</mov_director>';
+        $rss .= '<mov_writer>' . $mov_writer . '</mov_writer>';
+        $rss .= '<mov_artist>' . $mov_artist . '</mov_artist>';
+        $rss .= '<mov_genre>' . $mov_genre . '</mov_genre>';
         $rss .= '</movie>';
     }
     $rss .= '</channel>';
