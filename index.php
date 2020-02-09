@@ -14,7 +14,6 @@
      $mov_writer = $data->getElementsByTagName("mov_writer")->item(0)->nodeValue;
      $mov_artist = $data->getElementsByTagName("mov_artist")->item(0)->nodeValue;
      $mov_genre = $data->getElementsByTagName("mov_genre")->item(0)->nodeValue;
-     
      echo "<ul>
             <h2>$mov_title</h2>
               <ul>
