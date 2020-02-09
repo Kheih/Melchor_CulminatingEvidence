@@ -3,7 +3,7 @@
     $rss .= '<rss version="2.0">';
     $rss .= '<channel>';
 
-    $con = mysqli_connect("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com", "admin", "root1234", "db_1820410") or die (mysqli_error($con));
+    $con = mysqli_connect("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com", "admin", "root1234", "db_1820343") or die (mysqli_error($con));
     $sql = "SELECT * FROM tblmovie;";
     $q = mysqli_query($con, $sql) or die (mysqli_error($con));
     
