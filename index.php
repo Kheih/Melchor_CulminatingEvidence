@@ -5,7 +5,7 @@
  $content = $domOBJ->getElementsByTagName("movie");
 ?>
 
- <h1>Best Movies in 2019<h1>
+ <h1>Best Movies in 2019</h1>
 
 <?php
  foreach( $content as $data ){
@@ -18,7 +18,7 @@
             <h2>$mov_title</h2>
               <ul>
                   <li>Director: $mov_director </li>
-                  <li>Writer: $mov_writer</li>
+                  <li>Writer: $mov_writer </li>
                   <li>Artist: $mov_artist </li>
                   <li>Genre: $mov_genre </li>
               </ul>
