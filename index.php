@@ -3,25 +3,27 @@
  $domOBJ->load("https://xmlkheih.herokuapp.com/rss.php");//XML page URL
  
  $content = $domOBJ->getElementsByTagName("movie");
-?>
-
- <h1>Best Movies in 2019</h1>
-
-<?php
- foreach( $content as $data ){
-     $mov_title = $data->getElementsByTagName("mov_title")->item(0)->nodeValue;
-     $mov_director = $data->getElementsByTagName("mov_director")->item(0)->nodeValue;
-     $mov_writer = $data->getElementsByTagName("mov_writer")->item(0)->nodeValue;
-     $mov_artist = $data->getElementsByTagName("mov_artist")->item(0)->nodeValue;
-     $mov_genre = $data->getElementsByTagName("mov_genre")->item(0)->nodeValue;
-     echo "<ul>
-            <h2>$mov_title</h2>
-              <ul>
-                  <li>Director: $mov_director </li>
-                  <li>Writer: $mov_writer </li>
-                  <li>Artist: $mov_artist </li>
-                  <li>Genre: $mov_genre </li>
-              </ul>
-          </ul>";
+ 
+ ?>
+<h2> Best Movies in 2019 </h2>
+ <ul>
+    <?php
+ foreach( $content as $data )
+ {
+   $title = $data->getElementsByTagName("title")->item(0)->nodeValue;
+   $director= $data->getElementsByTagName("director")->item(0)->nodeValue;
+   $writer = $data->getElementsByTagName("writer")->item(0)->nodeValue;
+   $artist = $data->getElementsByTagName("artist")->item(0)->nodeValue;
+   $genre= $data->getElementsByTagName("genre")->item(0)->nodeValue;
+  
+   echo "<li><b>Title:</b> $title
+            <ul>
+                <li> <b>Director:</b> $director</li>
+                <li> <b>Writer:</b> $writer</li>
+                <li> <b>Artist:</b> $artist</li>
+		            		<li> <b>Genre:</b> $genre</li>
+            </ul>
+        </li>";
  }
 ?>
+</ul>
