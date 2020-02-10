@@ -21,7 +21,7 @@
                 <li> <b>Director:</b> $director</li>
                 <li> <b>Writer:</b> $writer</li>
                 <li> <b>Artist:</b> $artist</li>
-		            		<li> <b>Genre:</b> $genre</li>
+		<li> <b>Genre:</b> $genre</li>
             </ul>
         </li>";
  }
