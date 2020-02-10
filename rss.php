@@ -5,7 +5,7 @@ $rss .= '<rss version="2.0">';
 $rss .= '<channel>';
 
 $connect = mysqli_connect("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com", "admin", "root1234", "db_1820343") or die (mysqli_error($connect));
-$sql = "SELECT * FROM tbl_movie";
+$sql = "SELECT * FROM tblmovie";
 $query = mysqli_query($connect,$sql) or die (mysqli_error($connect));
 
 
