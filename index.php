@@ -1,36 +1,27 @@
 <?php
  $domOBJ = new DOMDocument();
- $domOBJ->load("https://kheih17.herokuapp.com/rss.php");//XML page URL
+ $domOBJ->load("https://xmlkheih.herokuapp.com/rss.php");//XML page URL
  
  $content = $domOBJ->getElementsByTagName("movie");
 ?>
 
- <h1>Best Movies in 2019</h1>
+ <h1>Best Movies in 2020</h1>
 
- <?php
- foreach( $content as $data )
- {?>
-     <div class="border">
-     <?php
-     $title = $data->getElementsByTagName("title")->item(0)->nodeValue;
-     $director = $data->getElementsByTagName("director")->item(0)->nodeValue;
-     $writer = $data->getElementsByTagName("writer")->item(0)->nodeValue;
-     $artist = $data->getElementsByTagName("artist")->item(0)->nodeValue;
-     $genre = $data->getElementsByTagName("genre")->item(0)->nodeValue;
- 
- echo "<ul>
-            <h2>$title</h2>
+<?php
+ foreach( $content as $data ){
+     $mov_title = $data->getElementsByTagName("mov_title")->item(0)->nodeValue;
+     $mov_director = $data->getElementsByTagName("mov_director")->item(0)->nodeValue;
+     $mov_writer = $data->getElementsByTagName("mov_writer")->item(0)->nodeValue;
+     $mov_artist = $data->getElementsByTagName("mov_artist")->item(0)->nodeValue;
+     $mov_genre = $data->getElementsByTagName("mov_genre")->item(0)->nodeValue;
+     echo "<ul>
+            <h2>$mov_title</h2>
               <ul>
-                  <li>director: $director </li>
-                  <li>writer: $writer </li>
-                  <li>artist: $artist </li>
-		  <li>genre: $genre </li>
+                  <li>Director: $mov_director </li>
+                  <li>Writer: $mov_writer</li>
+                  <li>Artist: $mov_artist </li>
+                  <li>Genre: $mov_genre </li>
               </ul>
           </ul>";
-    ?>
-     </div>
-  <?php
  }
 ?>
-</div>
-</div>
