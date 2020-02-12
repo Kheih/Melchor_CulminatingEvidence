@@ -1,27 +1,33 @@
 <?php 
+    $conn = mysqli_connect("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com", "admin", "root1234") or die (mysqli_error($conn));
+    $db = mysqli_select_db($conn, "db_1820343");
 
-$rss= '<?xml version="1.0" encoding="UTF-8"?>';
-$rss .= '<rss version="2.0">';
-$rss .= '<channel>';
+    if(mysqli_connect_errno($conn)){
+        echo "Database connection failed!: ". mysqli_connect_errno();
+    }
+    $sql = "SELECT * FROM tblmovie";
+    $q = mysqli_query($conn, $sql);
 
-$connect = mysqli_connect("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com", "admin", "root1234", "db_1820343") or die (mysqli_error($connect));
-$sql = "SELECT * FROM tblmovie";
-$query = mysqli_query($connect,$sql) or die (mysqli_error($connect));
+    header("Content-type: text/xml");
 
-
-while($record= mysqli_fetch_assoc($query)) {
-    extract($record);
+    echo "<?xml version='1.0' encoding='UTF-8'?>
+        <rss version='2.0'><channel>";
     
-    $rss .= '<movie>';
-    $rss .= '<title>' . $title. '</title>';
-    $rss .= '<director>' . $director . '</director>';
-    $rss .= '<writer>' . $writer . '</writer>';
-    $rss .= '<artist>' . $artist . '</artist>';
-    $rss .= '<genre>' . $genre . '</genre>';
-    $rss .= '</movie>';
-}
-$rss .= '</channel>';
-$rss .= '</rss>';
+    while($r = mysqli_fetch_array($q)){
 
-echo $rss; 
+        $title = $r['title'];
+        $writer = $r['writer'];
+        $director = $r['director'];
+        $artist = $r['artist'];
+		$genre = $r['genre'];
+
+        echo "<movie>
+        <title>$title</title>
+        <writer>$writer</writer>
+        <director>$director</director>
+        <artist>$artist</artist>
+		<genre>$genre</genre>
+        </movie>";
+    }
+    echo "</channel></rss>";
 ?>
