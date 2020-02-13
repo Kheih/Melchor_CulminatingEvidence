@@ -1,26 +1,29 @@
 <?php
  $domOBJ = new DOMDocument();
- $domOBJ->load("https://kheihxml.herokuapp.com/rssf.php");//XML page URL
+ $domOBJ->load("https://kheihxml.herokuapp.com/rss.php");//XML page URL
  
  $content = $domOBJ->getElementsByTagName("movie");
+
 ?>
 
- <h1>Best Movie 2019</h1>
+ <h2> Best Movies in 2019 </h2>
 
 <?php
- foreach( $content as $data ){
+ foreach( $content as $data )
+ {
      $mov_title = $data->getElementsByTagName("mov_title")->item(0)->nodeValue;
+     $mov_director = $data->getElementsByTagName("mov_director")->item(0)->nodeValue;
+     $mov_writer = $data->getElementsByTagName("mov_writer")->item(0)->nodeValue;
      $mov_artist = $data->getElementsByTagName("mov_artist")->item(0)->nodeValue;
      $mov_genre = $data->getElementsByTagName("mov_genre")->item(0)->nodeValue;
-     $mov_writer = $data->getElementsByTagName("mov_writer")->item(0)->nodeValue;
-     $mov_director = $data->getElementsByTagName("mov_director")->item(0)->nodeValue;
-     echo "<ul>
-            <h2>$mov_title</h2>
+     
+  echo "<ul>
+            <h3>$mov_title</h3>
               <ul>
                   <li>Director: $mov_director </li>
+                  <li>Writer: $mov_writer </li>
                   <li>Artist: $mov_artist </li>
                   <li>Genre: $mov_genre </li>
-                  <li>Writer: $mov_writer </li>
               </ul>
           </ul>";
  }
