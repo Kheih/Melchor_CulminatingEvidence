@@ -1,14 +1,14 @@
 <?php
  $domOBJ = new DOMDocument();
  $domOBJ->load("https://kheihxml.herokuapp.com/rss.php");//XML page URL
- 
+
  $content = $domOBJ->getElementsByTagName("movie");
 ?>
 
 <h1>Best Movies in 2019</h1>
 
 <?php
- foreach( $content as $data ){
+ foreach($content as $data){
      $mov_title = $data->getElementsByTagName("mov_title")->item(0)->nodeValue;
      $mov_director = $data->getElementsByTagName("mov_director")->item(0)->nodeValue;
      $mov_writer = $data->getElementsByTagName("mov_writer")->item(0)->nodeValue;
