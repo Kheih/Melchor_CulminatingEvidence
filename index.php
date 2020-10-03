@@ -217,7 +217,8 @@
     </div>
   </div>
 		<div class="msg-col">
-			<h1> Welcome to Panda & Bamboo</h1>
+			<h1> Welcome to </h1>
+			<h1>Panda & Bamboo</h1>
 			<p>"A panda's daily diet consists almost entirely of the leaves, stems and shoots of various bamboo species. Learn why these much-loved animals are endangered in their bamboo forest homes. Discover the panda's surprising skill at swimming and climbing."</p>
 			<a href="">Get Started</a>
 		</div>
