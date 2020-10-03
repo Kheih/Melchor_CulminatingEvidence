@@ -71,26 +71,45 @@
 	</div>
    
 	<h2>panda & bamboo</h2>
-		<div class = "panda-logo-h">
-			<div class = "ear-h"></div>
-        <div class = "face-h">
-			<div class = "eye-shade-h"></div>
-				<div class = "eye-white-h">
-					<div class="shut-h">
-						<span></span>
-					</div>
-			<div class = "eye-ball-h"></div>
-				</div>
-			<div class = "eye-shade-h rgt"></div>
-				<div class = "eye-white-h rgt">
-					<div class="shut-h">
-						<span></span>
-					</div>
-			<div class = "eye-ball-h"></div>
-				</div>
-			<div class = " nose-h"></div>
-			<div class = " mouth-h"></div>
-		</div>
+		 <div class="panda-logo-h-h">
+    <div class="body-h-h">
+      <div class="arm-h-h left">
+        <div class="forearm">
+          <div class="hand-h-h"></div>
+        </div>
+      </div>
+      <div class="leg-h-h left"><div class="foot-h-h"></div></div>
+      <div class="belly">
+      </div>
+      <div class="leg-h-h right"><div class="foot-h-h"></div></div>
+      <div class="head-h-h">
+        <div class="ear-h-h left"></div>
+        <div class="ear-h-h right"></div>
+        <div class="cheek right"></div>
+        <div class="face-h-h">
+          <div class="eye-h-h left"></div>
+          <div class="eye-h-h right"></div>
+        </div>
+      </div>
+      <div class="arm-h-h right">
+        <div class="forearm">
+          <div class="hand-h-h">
+            <div class="bamboo-h-h joint2">
+              <div class="joint"></div>
+              <div class="joint"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="head-h-h front">
+        <div class="mouth-h-h"></div>
+        <div class="nose-h-h">
+          <div class="mustache left"></div>
+          <div class="mustache right"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
  <body>
     <div class ="msg-container">
@@ -242,7 +261,7 @@
 			<div class = "hand"></div>
 			<div class = "hand rgt"></div>
         
-        <h1>Sign-up Panda</h1>
+        <h1>Sign-in to Panda</h1>
 			<div class ="form-group">
 				<input required="required" class="form-control"/>
 				<label class="form-label">Username</label>
